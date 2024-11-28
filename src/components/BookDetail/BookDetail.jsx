@@ -20,9 +20,19 @@ const BookDetail = () => {
     rating,
   } = book;
 
+  const handleMarkAsRead = () => {
+    /* 
+    1. understand what to store or save: => bookId
+    2. where to store: => database
+    3. array, list, collection: 
+    4. check if the book is already readlist or not. If not then add to the book to the list. if yes, do not add the book
+    
+    */
+  }
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 mb-10">
-      <div className=" bg-gray-100 rounded-xl flex justify-center items-center h-[540px] w-[450px]">
+      <div className=" bg-gray-100 rounded-xl flex justify-center items-center  w-[450px]">
         <img className="h-[400px] " src={image} alt={bookName} />
       </div>
       <div>
@@ -61,8 +71,8 @@ const BookDetail = () => {
           </div>
         </div>
         <div className="flex gap-5 mt-5">
-        <button className="btn btn-outline btn-accent">Read</button>
-          <button className="btn btn-info">Wishlist</button>
+        <button onClick={handleMarkAsRead} className="btn btn-outline btn-accent">Mark as Read</button>
+          <button className="btn btn-info">Add to Wishlist</button>
         </div>
       </div>
     </div>

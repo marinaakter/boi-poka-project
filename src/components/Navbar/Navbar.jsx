@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const links = (
     <>
-      <div className="flex gap-8 py-5">
+      <div className="md:flex space-y-3 md:space-y-0 gap-8 py-5">
       <li>
       <NavLink className="py-3" to="/">Home</NavLink>
       </li>
@@ -38,9 +38,11 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow "
           >
+            
             {links}
+            
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">Boipoka</a>

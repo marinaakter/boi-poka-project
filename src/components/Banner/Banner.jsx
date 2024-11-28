@@ -1,9 +1,9 @@
 import BannerImg from "../../assets/book.jpg";
 const Banner = () => {
   return (
-    <div className="hero bg-base-200 min-h-screen rounded-lg">
-      <div className="hero-content flex-col px-12  lg:flex-row-reverse">
-        <img src={BannerImg} className="max-w-sm rounded-lg shadow-2xl" />
+    <div className="hero bg-base-200 md:p-16  rounded-lg">
+      <div className="hero-content flex-col md:px-12 lg:flex-row-reverse text-center">
+        <img src={BannerImg} className="md:max-w-sm rounded-lg shadow-2xl" />
         <div>
           <h1 className="text-5xl font-bold">
             Books to Freshen up your bookshelf!
