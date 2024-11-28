@@ -8,7 +8,6 @@ const Banner = () => {
           <h1 className="text-5xl font-bold">
             Books to Freshen up your bookshelf!
           </h1>
-
           <button className="btn btn-accent mt-8">View The List</button>
         </div>
       </div>
