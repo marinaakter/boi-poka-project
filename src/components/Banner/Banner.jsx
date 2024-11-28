@@ -1,5 +1,17 @@
+import { useRef } from "react";
 import BannerImg from "../../assets/book.jpg";
 const Banner = () => {
+  
+    const booksRef = useRef(null)
+
+    const handleScroll = () => {
+      if (booksRef.current) {
+        booksRef.current.scrollIntoView({behavior: "smooth"})
+      }
+    }
+
+
+
   return (
     <div className="hero bg-base-200 md:p-16  rounded-lg">
       <div className="hero-content flex-col md:px-12 lg:flex-row-reverse text-center">
@@ -8,7 +20,7 @@ const Banner = () => {
           <h1 className="text-5xl font-bold">
             Books to Freshen up your bookshelf!
           </h1>
-          <button className="btn btn-accent mt-8">View The List</button>
+          <button onClick={handleScroll} ref={booksRef}  className="btn btn-accent mt-8">View The List</button>
         </div>
       </div>
     </div>
