@@ -1,7 +1,0 @@
-const getStoredReadList = () => {
-    
-}
-
-const addToStoredReadList = () => {
-    
-}
