@@ -7,7 +7,7 @@ const BookDetail = () => {
   const book = data.find((book) => book.bookId === id);
 
   const {
-    bookId: currentBookId,
+    // bookId: currentBookId,
     bookName,
     author,
     image,
@@ -31,7 +31,9 @@ const BookDetail = () => {
         <div className="divider"></div>
         <p>{category}</p>
         <div className="divider"></div>
-        <p><span className="font-bold">Review:</span> {review} </p>
+        <p>
+          <span className="font-bold">Review:</span> {review}{" "}
+        </p>
         <div className="flex gap-4 space-y-3">
           <span className="mt-3 font-bold">Tag </span>
           {tags.map((tag, index) => (
@@ -50,13 +52,17 @@ const BookDetail = () => {
             <p>Publisher: </p>
             <p>Year of Publishing: </p>
             <p>Ratings: </p>
-         </div>
+          </div>
           <div className="ml-10">
             <p className="font-bold">{totalPages}</p>
             <p className="font-bold"> {publisher} </p>
             <p className="font-bold"> {yearOfPublishing} </p>
             <p className="font-bold"> {rating} </p>
-          </div> 
+          </div>
+        </div>
+        <div className="flex gap-5 mt-5">
+        <button className="btn btn-outline btn-accent">Read</button>
+          <button className="btn btn-info">Wishlist</button>
         </div>
       </div>
     </div>
