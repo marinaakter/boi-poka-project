@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToStoredReadList } from "../../utility/addToDo";
 
 const BookDetail = () => {
   const { bookId } = useParams();
@@ -20,7 +21,7 @@ const BookDetail = () => {
     rating,
   } = book;
 
-  const handleMarkAsRead = () => {
+  const handleMarkAsRead = (id) => {
     /* 
     1. understand what to store or save: => bookId
     2. where to store: => database
@@ -28,6 +29,9 @@ const BookDetail = () => {
     4. check if the book is already readlist or not. If not then add to the book to the list. if yes, do not add the book
     
     */
+    addToStoredReadList(id)
+
+
   }
 
   return (
@@ -71,7 +75,7 @@ const BookDetail = () => {
           </div>
         </div>
         <div className="flex gap-5 mt-5">
-        <button onClick={handleMarkAsRead} className="btn btn-outline btn-accent">Mark as Read</button>
+        <button onClick={()=> handleMarkAsRead(bookId)} className="btn btn-outline btn-accent">Mark as Read</button>
           <button className="btn btn-info">Add to Wishlist</button>
         </div>
       </div>
