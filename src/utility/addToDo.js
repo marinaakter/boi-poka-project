@@ -20,4 +20,27 @@ const addToStoredReadList = (id) => {
     }
 }
 
-export {addToStoredReadList}
+const getStoredWishList = () => {
+    const storedWishListStr = localStorage.getItem('wish-list')
+    if (storedWishListStr) {
+        const storedWishList = JSON.parse(storedWishListStr);
+        return storedWishList
+    }
+    else {
+        return []
+    }
+}
+
+const addToStoredWishList = (id) => {
+    const storedWishList = getStoredWishList()
+    if (storedWishList.includes()) {
+        console.log(id, 'Already Exists in the Read list')
+    }
+    else {
+        storedWishList.push(id)
+        const storedWishListStr = JSON.stringify(storedWishList)
+        localStorage.setItem('wish-list', storedWishListStr)
+    }
+}
+
+export {addToStoredReadList, addToStoredWishList}

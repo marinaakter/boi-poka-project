@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToStoredReadList } from "../../utility/addToDo";
+import { addToStoredReadList, addToStoredWishList } from "../../utility/addToDo";
 
 const BookDetail = () => {
   const { bookId } = useParams();
@@ -30,8 +30,12 @@ const BookDetail = () => {
     
     */
     addToStoredReadList(id)
+    
 
 
+  }
+  const handleWishList = (id) => {
+    addToStoredWishList(id)
   }
 
   return (
@@ -76,7 +80,7 @@ const BookDetail = () => {
         </div>
         <div className="flex gap-5 mt-5">
         <button onClick={()=> handleMarkAsRead(bookId)} className="btn btn-outline btn-accent">Mark as Read</button>
-          <button className="btn btn-info">Add to Wishlist</button>
+          <button onClick={()=> handleWishList(bookId)} className="btn btn-info">Add to Wishlist</button>
         </div>
       </div>
     </div>
