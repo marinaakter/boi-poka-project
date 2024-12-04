@@ -27,7 +27,6 @@ const BookDetail = () => {
     2. where to store: => database
     3. array, list, collection: 
     4. check if the book is already readlist or not. If not then add to the book to the list. if yes, do not add the book
-    
     */
     addToStoredReadList(id)
     

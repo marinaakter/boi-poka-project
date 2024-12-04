@@ -10,7 +10,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className="py-3" to="/">
+          <NavLink className="py-3" to="/listedBooks">
             Listed Books
           </NavLink>
         </li>
