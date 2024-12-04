@@ -15,7 +15,7 @@ const ListedBooks = () => {
     );
 
     setReadList(readBookList);
-  }, []);
+  }, [allBooks]);
   return (
     <div>
       <Tabs>
