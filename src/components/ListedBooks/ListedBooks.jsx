@@ -18,6 +18,7 @@ const ListedBooks = () => {
   }, [allBooks]);
   return (
     <div>
+      <button className="bg-gray-200 rounded-lg w-full py-4 mb-9 font-bold text-2xl">Books</button>
       <Tabs>
         <TabList>
           <Tab>Read Books</Tab>
@@ -26,9 +27,11 @@ const ListedBooks = () => {
 
         <TabPanel>
           <h2>Books I read:{readList.length} </h2>
+          <div >
           {readList.map((book) => (
             <Book key={book.bookId} book={book}></Book>
           ))}
+          </div>
         </TabPanel>
         <TabPanel>
           <h2>My WishList</h2>
